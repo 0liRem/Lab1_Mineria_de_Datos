@@ -1,0 +1,130 @@
+======================================================================
+================ REPORTE DE ANALISIS DE DATOS DEL INE ================
+======================================================================
+
+Fecha de generacion: 2026-02-13 15:23:33
+Directorio de datos: datos_ine
+
+----------------------------------------------------------------------
+1. RESUMEN DE DATOS CARGADOS
+----------------------------------------------------------------------
+
+Total de datasets cargados: 85
+Categorias de datasets:
+  - nacimientos: 14 archivos
+  - defunciones: 28 archivos
+  - defunciones_fetales: 14 archivos
+  - matrimonios: 14 archivos
+  - divorcios: 14 archivos
+  - violencia_intrafamiliar: 15 archivos
+
+----------------------------------------------------------------------
+2. DATOS COMBINADOS POR AÑO
+----------------------------------------------------------------------
+
+Rango de años: 2008 - 2022
+Total de años: 15
+
+Estadisticas descriptivas de variables principales:
+
+total_nacimientos:
+  Media: 2656398469.64
+  Mediana: 2870872494.00
+  Desv. Estandar: 767635145.62
+  Minimo: 350470684.00
+  Maximo: 3244909128.00
+
+total_defunciones:
+  Media: 455303423.66
+  Mediana: 506284166.00
+  Desv. Estandar: 161495987.92
+  Minimo: 54189494.00
+  Maximo: 717082038.00
+
+total_defunciones_fetales:
+  Media: 23626650.95
+  Mediana: 16756691.50
+  Desv. Estandar: 14656272.59
+  Minimo: 10645859.00
+  Maximo: 47887002.00
+
+total_matrimonios:
+  Media: 393421941.64
+  Mediana: 365247810.50
+  Desv. Estandar: 207189125.53
+  Minimo: 220981891.00
+  Maximo: 1082750771.00
+
+total_divorcios:
+  Media: 51032895.64
+  Mediana: 41785772.50
+  Desv. Estandar: 27555272.01
+  Minimo: 22446942.00
+  Maximo: 100568670.00
+
+total_violencia_intrafamiliar:
+  Media: 527280625.93
+  Mediana: 518101506.00
+  Desv. Estandar: 74518698.52
+  Minimo: 363298859.00
+  Maximo: 672767573.00
+
+----------------------------------------------------------------------
+3. RESULTADOS DEL CLUSTERING
+----------------------------------------------------------------------
+
+Clustering General (k=3):
+  Silhouette Score: 0.568
+
+  Distribucion de clusters por año:
+    Cluster 0: 4 años - [2012, 2013, 2021, 2022]
+    Cluster 1: 10 años - [2009, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    Cluster 2: 1 años - [2008]
+
+Clustering Social (Matrimonios/Divorcios):
+  Silhouette Score: 0.713
+
+  Distribucion de clusters sociales por año:
+    Cluster Social 0: 10 años - [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+    Cluster Social 1: 3 años - [2010, 2011, 2012]
+    Cluster Social 2: 1 años - [2009]
+
+----------------------------------------------------------------------
+4. METRICAS CLAVE POR AÑO
+----------------------------------------------------------------------
+
+ year  crecimiento_total_nacimientos  crecimiento_total_defunciones  crecimiento_total_defunciones_fetales  crecimiento_total_matrimonios  crecimiento_total_divorcios  crecimiento_total_violencia_intrafamiliar  ratio_divorcios_matrimonios  crecimiento_vegetativo
+ 2008                            NaN                            NaN                                    NaN                            NaN                          NaN                                        NaN                          NaN                     NaN
+ 2009                            NaN                            NaN                                    NaN                            NaN                          NaN                                      40.19                         5.94             296281190.0
+ 2010                         532.42                         603.67                                  13.93                         -67.62                        34.06                                       1.73                        24.57            1835134843.0
+ 2011                           2.50                          -0.26                                  -3.37                           6.90                        16.72                                       1.94                        26.83            1891547709.0
+ 2012                           0.00                           0.00                                   0.00                           0.00                         0.00                                       8.69                        26.83            1891547709.0
+ 2013                          36.68                         -13.31                                 -76.30                         -40.13                       -77.60                                       2.36                        10.04            2775500425.0
+ 2014                         -21.25                           1.40                                  -2.94                          -1.53                        -0.36                                      -6.61                        10.16            2111180844.0
+ 2015                          32.69                          48.77                                  58.89                          72.25                        52.34                                      -7.33                         8.98            2747562790.0
+ 2016                          -0.29                           6.41                                   6.85                         -11.97                        -1.72                                      -2.47                        10.03            2706408944.0
+ 2017                          -0.68                          -2.37                                   0.30                           2.85                         1.34                                      -1.36                         9.88            2697097580.0
+ 2018                           0.44                          -0.28                                  -8.44                           4.44                         6.69                                      -1.36                        10.10            2712571648.0
+ 2019                          -4.56                           6.16                                  -7.68                           2.94                        29.98                                       9.33                        12.75            2533536447.0
+ 2020                          -9.63                           7.95                                 -13.46                         -25.37                       -51.42                                     -12.95                         8.30            2193343284.0
+ 2021                           2.41                          21.44                                  12.73                          52.52                       134.72                                      40.19                        12.77            2133686941.0
+ 2022                           1.41                         -16.18                                 -10.06                          -7.50                         3.38                                       4.48                        14.27            2289930289.7
+
+----------------------------------------------------------------------
+5. CONCLUSIONES DEL ANALISIS
+----------------------------------------------------------------------
+
+* Años atipicos por cluster:
+  - Cluster 2 (años [2008]) podria representar periodos atipicos
+
+* Tendencias generales:
+  - La proporcion de divorcios respecto a matrimonios ha disminuido en nan puntos porcentuales
+  - Crecimiento vegetativo promedio positivo: 2201095046 personas/año
+
+* Recomendaciones:
+  - Los clusters formados son consistentes y podrian usarse para segmentacion temporal
+  - Incluir analisis mas detallado de violencia intrafamiliar en estudios futuros
+
+======================================================================
+========================== FIN DEL REPORTE ===========================
+======================================================================
