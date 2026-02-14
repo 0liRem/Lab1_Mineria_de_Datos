@@ -239,13 +239,6 @@ def explorar_archivos_sav_detallado(ruta_datos):
     print(f"\n{'' * 100}")
     print(" EXPLORACIÓN COMPLETADA")
     print(f"{'' * 100}\n")
-    
-    print("PRÓXIMOS PASOS SUGERIDOS:")
-    print("   1. Identifica las variables temporales (año) en cada archivo")
-    print("   2. Decide qué variables numéricas son importantes para tu análisis")
-    print("   3. Ejecuta el script principal de análisis (analisis_ine_mejorado.py)")
-    print("   4. Revisa las pruebas de normalidad para saber si tus datos son normales")
-    print("   5. Analiza los clusters y correlaciones para encontrar patrones\n")
 
 
 if __name__ == "__main__":
